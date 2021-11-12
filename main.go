@@ -17,7 +17,7 @@ func main() {
 
 		fmt.Print(len(s))
 	} else {
-		fmt.Print("0")
+		fmt.Print(0)
 	}
 
 }
