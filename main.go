@@ -12,7 +12,12 @@ func main() {
 
 	str, _ = bufio.NewReader(os.Stdin).ReadString('\n')
 
-	s := strings.Fields(str)
+	if str != "" {
+		s := strings.Fields(str)
 
-	fmt.Print(len(s))
+		fmt.Print(len(s))
+	} else {
+		fmt.Print("0")
+	}
+
 }
