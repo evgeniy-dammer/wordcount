@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 	"strings"
@@ -9,8 +8,14 @@ import (
 
 func main() {
 	var str string
+	if len(os.Args) < 2 {
+		fmt.Print(0)
+		os.Exit(0)
+	}
 
-	str, _ = bufio.NewReader(os.Stdin).ReadString('\n')
+	str = os.Args[1]
+
+	fmt.Println(str)
 
 	if str != "" {
 		s := strings.Fields(str)
